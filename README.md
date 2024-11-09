@@ -15,4 +15,5 @@ The codebase is organized into four main layers, each with a specific responsibi
 - **Infrastructure**: Implements the interfaces defined in the `Domain` layer and handles communication with the outside world (e.g., databases, external APIs). It also includes the API layer built using Django Ninja.
 
 ### Layered Structure Overview
-
+```plaintext
+entities < domain < application < infrastructure
