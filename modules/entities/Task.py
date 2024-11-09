@@ -7,3 +7,7 @@ class TaskEntity:
     title: str
     description: str
     confirmed: bool
+
+    def mark_as_completed(self):
+        self.confirmed = True
+        
