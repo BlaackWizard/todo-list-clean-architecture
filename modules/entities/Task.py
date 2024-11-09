@@ -10,4 +10,3 @@ class TaskEntity:
 
     def mark_as_completed(self):
         self.confirmed = True
-        
