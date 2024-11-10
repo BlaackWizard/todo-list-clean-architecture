@@ -5,7 +5,7 @@ from modules.entities.Task import TaskEntity
 
 class TaskServices(ABC):
     @abstractmethod
-    def create_task(self, title: str, description: str) -> TaskEntity:
+    def create_task(self, id: int, title: str, description: str) -> TaskEntity:
         ...
 
     @abstractmethod
