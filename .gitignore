@@ -5,3 +5,4 @@ DS.store
 *.idea
 *.pyc
 local.py
+db.sqlite3
