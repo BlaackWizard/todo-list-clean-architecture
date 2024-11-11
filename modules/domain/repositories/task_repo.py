@@ -13,7 +13,7 @@ class TaskRepo(ABC):
         ...
 
     @abstractmethod
-    def save_task(self, task: TaskEntity) -> None:
+    def save_task(self, task) -> None:
         ...
 
     @abstractmethod
