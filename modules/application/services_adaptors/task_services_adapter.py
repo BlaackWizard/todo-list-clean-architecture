@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
-from modules.domain.services.task_services import TaskServices
 from modules.domain.repositories.task_repo import TaskRepo
+from modules.domain.services.task_services import TaskServices
 from modules.entities.Task import TaskEntity
 
 
@@ -9,8 +9,8 @@ from modules.entities.Task import TaskEntity
 class TaskServicesAdapter(TaskServices):
     task_repo: TaskRepo
 
-    def create_task(self, id: int, title: str, description: str) -> TaskEntity:
-        task = TaskEntity(id=id,title=title, description=description, confirmed=False)
+    def create_task(self, task_id: int, title: str, description: str) -> TaskEntity:
+        task = TaskEntity(id=task_id, title=title, description=description, confirmed=False)
         self.task_repo.save_task(task)
         return task
 
@@ -25,8 +25,9 @@ class TaskServicesAdapter(TaskServices):
         self.task_repo.delete_task(task)
 
     def _to_entity(self, task):
-        return TaskEntity(id=task.id,
-                          title=task.title,
-                          description=task.description,
-                          confirmed=task.confirmed)
-
+        return TaskEntity(
+            id=task.id,
+            title=task.title,
+            description=task.description,
+            confirmed=task.confirmed,
+        )

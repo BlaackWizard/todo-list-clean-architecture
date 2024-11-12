@@ -3,7 +3,7 @@ from dataclasses import dataclass
 
 @dataclass
 class TaskEntity:
-    id: int
+    id: int  # noqa
     title: str
     description: str
     confirmed: bool

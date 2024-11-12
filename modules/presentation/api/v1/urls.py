@@ -1,4 +1,5 @@
 from ninja import Router
+
 from modules.presentation.api.v1.task.handlers import router as note_router
 
 router = Router(tags=['v1'])

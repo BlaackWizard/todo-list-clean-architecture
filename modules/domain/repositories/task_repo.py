@@ -3,6 +3,7 @@ from typing import List
 
 from modules.entities.Task import TaskEntity
 
+
 class TaskRepo(ABC):
     @abstractmethod
     def get_task(self, task_id: int) -> TaskEntity:

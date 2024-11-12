@@ -1,5 +1,6 @@
 from django.urls import path
 from ninja import NinjaAPI
+
 from modules.presentation.api.v1.urls import router as v1_router
 
 api = NinjaAPI()

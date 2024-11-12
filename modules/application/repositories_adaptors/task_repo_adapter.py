@@ -4,6 +4,7 @@ from typing import List
 from modules.domain.repositories.task_repo import TaskRepo
 from modules.entities.Task import TaskEntity
 
+
 @dataclass
 class TaskRepoAdapter:
     task_repo: TaskRepo
@@ -15,7 +16,7 @@ class TaskRepoAdapter:
                 id=task.id,
                 title=task.title,
                 description=task.description,
-                confirmed=task.confirmed
+                confirmed=task.confirmed,
             )
         return {'error': 'Task not found'}
 
@@ -34,5 +35,5 @@ class TaskRepoAdapter:
             id=task.id,
             title=task.title,
             description=task.description,
-            confirmed=task.confirmed
+            confirmed=task.confirmed,
         )
