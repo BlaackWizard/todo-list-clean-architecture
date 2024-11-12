@@ -3,7 +3,6 @@ from dataclasses import dataclass
 from modules.domain.services.task_services import TaskServices
 from modules.domain.repositories.task_repo import TaskRepo
 from modules.entities.Task import TaskEntity
-from modules.infrastructure.task.models import TaskModel
 
 
 @dataclass
@@ -25,7 +24,7 @@ class TaskServicesAdapter(TaskServices):
         task = self.task_repo.get_task(task_id)
         self.task_repo.delete_task(task)
 
-    def _to_entity(self, task: TaskModel):
+    def _to_entity(self, task):
         return TaskEntity(id=task.id,
                           title=task.title,
                           description=task.description,
