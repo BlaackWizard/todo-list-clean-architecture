@@ -10,3 +10,6 @@ class TaskOutSchema(Schema):
     title: str
     description: str
     confirmed: bool = False
+
+class ErrorSchema(Schema):
+    error: str
