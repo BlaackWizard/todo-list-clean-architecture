@@ -16,7 +16,7 @@ The codebase is organized into four main layers, each with a specific responsibi
 
 ### Layered Structure Overview
 ```plaintext
-entities < domain < application < infrastructure
+entities < domain < application < infrastructure < presentation
 ```
 
 ## How to Use
