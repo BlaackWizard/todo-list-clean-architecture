@@ -3,6 +3,7 @@ from dataclasses import dataclass
 
 @dataclass
 class CategoryEntity:
+    id: int
     title: str
 
 
@@ -12,7 +13,7 @@ class TaskEntity:
     title: str
     description: str
     confirmed: bool
-    category: CategoryEntity
+    category: str
 
     def mark_as_completed(self):
         self.confirmed = True

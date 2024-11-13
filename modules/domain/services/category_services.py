@@ -4,11 +4,11 @@ from modules.entities.Task import CategoryEntity
 
 class BaseCategoryServices(ABC):
     @abstractmethod
-    def create_category(self, title: str) -> CategoryEntity:
+    def create_category(self, category_id: int, title: str) -> CategoryEntity:
         ...
 
     @abstractmethod
-    def update_category(self, category_id: int) -> None:
+    def update_category(self, title: str, category_id: int) -> None:
         ...
 
     @abstractmethod

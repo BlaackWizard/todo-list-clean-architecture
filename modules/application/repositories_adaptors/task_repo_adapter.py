@@ -17,6 +17,7 @@ class TaskRepoAdapter:
                 title=task.title,
                 description=task.description,
                 confirmed=task.confirmed,
+                category=task.category,
             )
         return {'error': 'Task not found'}
 
@@ -36,4 +37,6 @@ class TaskRepoAdapter:
             title=task.title,
             description=task.description,
             confirmed=task.confirmed,
+            category=task.category
         )
+

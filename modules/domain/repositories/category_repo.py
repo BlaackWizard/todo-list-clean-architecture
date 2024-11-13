@@ -19,5 +19,5 @@ class BaseCategoryRepo(ABC):
         ...
 
     @abstractmethod
-    def delete_category(self, category_id: int) -> None:
+    def delete_category(self, category: CategoryEntity) -> None:
         ...

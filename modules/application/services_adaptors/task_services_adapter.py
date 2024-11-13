@@ -10,7 +10,7 @@ class TaskServicesAdapter(TaskServices):
     task_repo: TaskRepo
 
     def create_task(self, task_id: int, title: str, description: str) -> TaskEntity:
-        task = TaskEntity(id=task_id, title=title, description=description, confirmed=False)
+        task = TaskEntity(id=task_id, title=title, description=description, confirmed=False, category='Not category')
         self.task_repo.save_task(task)
         return task
 
@@ -30,4 +30,5 @@ class TaskServicesAdapter(TaskServices):
             title=task.title,
             description=task.description,
             confirmed=task.confirmed,
+            category=task.category
         )
