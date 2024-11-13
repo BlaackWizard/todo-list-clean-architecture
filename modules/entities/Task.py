@@ -1,12 +1,5 @@
 from dataclasses import dataclass
 
-
-@dataclass
-class CategoryEntity:
-    id: int
-    title: str
-
-
 @dataclass
 class TaskEntity:
     id: int  # noqa
