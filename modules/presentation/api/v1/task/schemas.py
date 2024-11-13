@@ -5,14 +5,14 @@ class TaskInSchema(Schema):
     id: int # noqa
     title: str
     description: str
-
+    category: str = 'Not category'
 
 class TaskOutSchema(Schema):
     id: int # noqa
     title: str
     description: str
-    confirmed: bool = False
-
+    confirmed: bool
+    category: str
 
 class ErrorSchema(Schema):
     error: str

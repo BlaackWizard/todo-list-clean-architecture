@@ -22,6 +22,7 @@ def get_task_by_id(request, task_id: int) -> 'TaskOutSchema':
         title=task.title,
         description=task.description,
         confirmed=task.confirmed,
+        category=task.category,
     )
 
 
@@ -33,15 +34,17 @@ def create_task(request, schema: TaskInSchema):
     task_repo_web = TaskRepoWeb()
     services = TaskServicesAdapter(task_repo_web)
     task = services.create_task(
-        id=schema.id,
+        task_id=schema.id,
         title=schema.title,
         description=schema.description,
+        category=schema.category
     )
     return 201, TaskOutSchema(
         id=task.id,
         title=task.title,
         description=task.description,
         confirmed=task.confirmed,
+        category=task.category
     )
 
 

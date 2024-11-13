@@ -27,4 +27,5 @@ class TaskRepoWeb(TaskRepo):
             title=task.title,
             description=task.description,
             confirmed=task.confirmed,
+            category=task.category
         )
